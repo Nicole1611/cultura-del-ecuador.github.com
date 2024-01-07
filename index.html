@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  Cultura de Ecuador</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1; /* Color de fondo gris claro */
+      color: #333; /* Color del texto principal negro */
+    }
+
+    h1 {
+      background-color: #CDA434; /* Color de fondo azul para el encabezado */
+      color: #fff; /* Color del texto blanco */
+      padding: 20px;
+      margin: 0;
+    }
+
+    .button-container {
+      text-align: right;
+      padding: 10px;
+    }
+
+    button {
+      font-size: 16px;
+      margin: 5px;
+      padding: 10px;
+      background-color: #AA3AEA; /* Color de fondo azul para los botones */
+      color: #fff; /* Color del texto blanco */
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #info {
+      background-color: #FFFefe; /* Color de fondo blanco para el área de información */
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f6f6f6;
+    }
+
+    /* Estilos adicionales para las tablas de cada región */
+    .general2 {
+      background-color: #5F8545; /*Rojizo */
+    }
+    .general1 {
+      background-color: #FFF5F3; /*Rojizo */
+    }
+    .general {
+      background-color: #eebfb6; /*Rojizo */
+    }
+    .costa2 {
+      background-color: #FFDE00; /* Azul */
+    }
+    .costa1 {
+      background-color: #F0F5FF; /* Azul */
+    }
+    .costa {
+      background-color: #C9DCFF; /* Azul */
+    }
+    .sierra2 {
+      background-color: #004DA3; /* Cafe */
+    }
+    .sierra1 {
+      background-color: #E8D9D7; /* Cafe */
+    }
+    .sierra {
+      background-color: #b69e9b; /* Cafe */
+    }
+    .amazonia2 {
+      background-color: #EE161F; /* Verde */
+    }
+    .amazonia1 {
+      background-color: #ECFFEF; /* Verde */
+    }
+    .amazonia {
+      background-color: #cbfad1; /* Verde */
+    }
+    .insular2 {
+     background-color: #1f5f93;
+    }
+    .insular1 {
+     background-color: #F0FFFF;
+    }
+    .insular {
+     background-color: #a1fafa;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  
+  </style>
+</head>
+<body>
+
+<h1>
+  <img src="imagenes/it.jpg" width="50px" height="50px" />
+  Cultura de Ecuador
+</h1>
+
+<div class="button-container">
+  <button class="general2" onclick="mostrarInfo('general')">Información General</button>
+  <button class="costa2" onclick="mostrarInfo('costa')">Costa</button>
+  <button class="sierra2" onclick="mostrarInfo('sierra')">Sierra</button>
+  <button class="amazonia2" onclick="mostrarInfo('amazonia')">Amazonía</button>
+  <button class="insular2" onclick="mostrarInfo('insular')">Insular</button>
+</div>
+
+<div id="info">
+  <h2>Información:</h2>
+  <p>Bienvenidos a la página que te mostrara todo el Ecuador. Selecciona una región para obtener más detalles.</p>
+  <h2>Información General sobre el Ecuador</h2>
+                    <table class="general1">
+                    <tr><th>Ecuador, ubicado en la región noroeste de América del Sur, es un país con una rica diversidad cultural influenciada por su geografía variada. Limita al norte con Colombia, al este y sur con Perú, y al oeste con el océano Pacífico. Su nombre proviene de su ubicación en la línea ecuatorial, lo que le otorga un clima diverso y una variedad única de flora y fauna. Ecuador tiene una población diversa, con influencias indígenas, mestizas y afrodescendientes. </th><th><img src="imagenes/i31.jpg" width="560px" height="315px" /></th></tr>
+                    <tr><td><iframe width="560" height="315" src="https://www.youtube.com/embed/RDbe-4Z5bvQ?si=I1ajqrXQVfMoMmkj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td><td>Ecuador se divide en cuatro regiones principales, cada una con características geográficas, climáticas y culturales distintas. Estas cuatro regiones son: Costa: Situada en la parte occidental del país, bordeando el océano Pacífico. Sierra: Ubicada en el centro del país, esta región abarca la cadena montañosa de los Andes. Amazonía o Región Amazónica: Localizada en la parte oriental del país, abarca la vasta selva amazónica. Región Insular o Galápagos: Incluye el archipiélago de las Islas Galápagos, ubicado en el océano Pacífico. Estas divisiones geográficas proporcionan una base para entender la diversidad natural y cultural de Ecuador, ya que cada región contribuye de manera única a la identidad del país.</td></tr>
+                    </table>
+</div>
+
+<script>
+  function mostrarInfo(region) {
+    var infoDiv = document.getElementById('info');
+    var contenido = '';
+
+    switch (region) {
+      case 'general':
+              contenido = '<h2>Información General sobre el Ecuador</h2>' +
+                    '<table class="general">' +
+                    '<tr><center><th>Aspecto</th><th>Descripción</th><th>Imagen</th></center></tr>' +
+                    '<tr><td>Idiomas</td><td>El idioma oficial es el español. Además, existen varias lenguas indígenas reconocidas, como el kichwa y el shuar.</td><td><img src="imagenes/i3.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Población</td><td>La población de Ecuador es diversa y cuenta con una mezcla de grupos étnicos. La población total es de alrededor de 17 millones de personas.</td><td><img src="imagenes/i4.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Moneda</td><td>La moneda oficial es el dólar estadounidense (USD), adoptada en el año 2000.</td><td><img src="imagenes/i5.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Gobierno</td><td>Ecuador es una república democrática.El país tiene un sistema presidencialista con una división de poderes en ejecutivo, legislativo y judicial.</td><td><img src="imagenes/i6.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Geografía</td><td>Ecuador se divide en cuatro regiones geográficas principales: Costa, Sierra, Amazonía y la Región Insular (Islas Galápagos).La geografía ecuatoriana es variada e incluye la cordillera de los Andes, selva amazónica, playas en la costa y las únicas islas oceánicas de Galápagos.</td><td><img src="imagenes/i7.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Turismo</td><td>Ecuador es conocido por su biodiversidad, los Andes, la Amazonía y las Islas Galápagos, que son destinos turísticos populares. Además, cuenta con una rica historia y arquitectura colonial en ciudades como Quito y Cuenca.</td><td><img src="imagenes/i8.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Clima</td><td>Debido a su ubicación geográfica y topografía diversa, Ecuador experimenta una variedad de climas, desde tropicales en la costa hasta templados en las tierras altas y cálidos en la región amazónica.</td><td><img src="imagenes/i9.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Cultura</td><td>La cultura ecuatoriana es una mezcla de influencias indígenas, españolas y africanas. La música, la danza, la artesanía y las festividades reflejan esta diversidad cultural.</td><td><img src="imagenes/i10.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Religión</td><td>La mayoría de la población es católica, con influencias de prácticas indígenas.</td><td><img src="imagenes/i11.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Festivales y Celebraciones</td><td>Ecuador celebra una variedad de festividades a lo largo del año, muchas de las cuales tienen raíces religiosas y tradicionales.La Inti Raymi, una festividad indígena que celebra el solsticio de verano, y la Fiesta de la Mama Negra, que combina elementos indígenas y africanos, son solo algunos ejemplos.</td><td><img src="imagenes/i12.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Artesanía y Arte</td><td>La artesanía ecuatoriana es conocida por su colorido y calidad. La cerámica, tejidos, bordados y esculturas reflejan la habilidad artística de las comunidades locales.Quito y Cuenca son ciudades donde se puede apreciar la arquitectura colonial y las artes visuales.</td><td><img src="imagenes/i13.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Gastronomía:</td><td>La comida ecuatoriana es variada y refleja la diversidad geográfica del país. Platos tradicionales incluyen la ceviche, el locro de papa, el cuy asado (conejo de Indias) y la fanesca, un guiso típico de Semana Santa.</td><td><img src="imagenes/i14.jpg" width="350px" height="350px" /></td></tr>' +
+                    '</table>';
+        break;
+
+      case 'costa':
+ contenido = '<h2>Region de la Costa</h2>' +
+ '<h2>Información General sobre la Costa del Ecuador</h2>' +
+                    '<table class="costa1">' +
+                    '<tr><th>La región Costa —también denominada región litoral o simplemente la Costa— es una de las cuatro regiones geográficas en las que está dividida la República del Ecuador. Se encuentra situada entre la cordillera de los Andes y el océano Pacífico. Su paisaje mayormente llano varía entre los matorrales y bosques secos del sur y los bosques húmedos del norte, con presencia de manglares en el Golfo de Guayaquil y en la costa norte. Se extiende por las provincias de Esmeraldas, Santo Domingo de los Tsáchilas, Manabí, Los Ríos, Guayas, Santa Elena y El Oro, así como porciones de provincias limítrofes. La ciudad principal y más poblada de esta región es Guayaquil.</th><th><img src="imagenes/i32.jpg" width="600px" height="600px" /></th></tr>' +
+                    '<tr><td><iframe width="560" height="315" src="https://www.youtube.com/embed/_2SZ7XCFm3Y?si=cmclEDUkSCekMDq2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td><td>La comida tradicional de la costa ecuatoriana es variada y deliciosa, destacando ingredientes frescos del mar y productos locales. Aquí te presento algunas de las comidas más representativas de la región:Ceviche, Encebollado, Arroz con Menestra y Carnes, Bolon de Verde, Corviche, Seco de Pollo con Arroz, Encocado de Pescado o Mariscos, Churrasco, Empanadas de Viento, Dulce de Higos con Queso. Estos platillos son solo una muestra de la rica oferta gastronómica de la costa ecuatoriana. La región se caracteriza por sus sabores frescos, influencias marítimas y la utilización de productos locales en su cocina tradicional.</td></tr>' +
+                    '</table>' +
+
+                    '<p>La región costa de Ecuador se caracteriza por su rica diversidad cultural influenciada por la proximidad al océano Pacífico. Algunos aspectos destacados incluyen:</p>' +
+                    '<table class="costa">' +
+                    '<tr><th>Aspecto</th><th>Descripción</th><th>Imágenes</th></tr>' +
+                    '<tr><td>Ubicacion</td><td>es una extensa área que se extiende a lo largo del litoral del océano Pacífico. Línea Costera:La costa ecuatoriana tiene una extensión de aproximadamente 2,237 kilómetros a lo largo del océano Pacífico.Topografía:La topografía de la Costa es variada. En el norte, hay llanuras costeras y playas arenosas, mientras que en el centro y sur, se encuentran cadenas montañosas que se extienden hacia el océano, formando acantilados y promontorios. </td><td><img src="imagenes/i36.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Ciudades Principales</td><td>Guayaquil:Es la ciudad más grande y poblada de la costa ecuatoriana.Esmeraldas:Conocida por su diversidad étnica y cultural, especialmente la influencia afroecuatoriana.</td><td><img src="imagenes/i23.jpg" width="350px" height="350px" /></td></tr>' +
+                   '<tr><td>Clima</td><td>La región tiene un clima tropical y cálido a lo largo del año. Las temperaturas suelen oscilar entre los 24°C y 30°C.La temporada de lluvias es de diciembre a mayo, mientras que la temporada seca va de junio a noviembre.</td><td><img src="imagenes/i15.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Biodiversidad</td><td>La Costa ecuatoriana es rica en biodiversidad. La región alberga manglares, estuarios, playas, bosques tropicales y una variedad de vida marina.</td><td><img src="imagenes/i16.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Playas y Destinos Turísticos</td><td>La Costa es famosa por sus hermosas playas. Destinos populares incluyen Salinas, Montañita, Puerto López y Ayampe, que atraen a turistas nacionales e internacionales.La Península de Santa Elena es conocida por sus hermosas playas y es un importante centro turístico.</td><td><img src="imagenes/i17.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Economía</td><td>La región Costa es una de las áreas más desarrolladas económicamente de Ecuador. Tiene una economía diversa que incluye actividades como la pesca, la agricultura, la industria manufacturera y el turismo.</td><td><img src="imagenes/i18.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Cultivos y Agricultura</td><td>Las tierras bajas de la Costa son propicias para la agricultura. Los cultivos comunes incluyen plátanos, cacao, arroz, café y productos tropicales.La producción de camarones es una actividad económica importante en las zonas costeras.</td><td><img src="imagenes/i19.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Manglares y Reservas Ecológicas</td><td>La región alberga extensos manglares que sirven como hábitat para diversas especies de aves, peces y crustáceos.Reservas ecológicas como la Reserva Ecológica Manglares Churute y la Reserva Ecológica Pacoche son lugares de conservación importantes.</td><td><img src="imagenes/i20.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Cultura y Tradiciones</td><td>Las comunidades costeras mantienen sus propias tradiciones culturales, que a menudo están vinculadas a la pesca y la vida marina.La música y la danza costeñas, como el pasillo y la marimba, son expresiones artísticas populares.</td><td><img src="imagenes/i21.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Puertos Marítimos</td><td>La región cuenta con varios puertos marítimos, siendo el Puerto de Guayaquil el más importante. Guayaquil es la ciudad más grande de la Costa y un centro comercial y económico significativo.</td><td><img src="imagenes/i22.jpg" width="350px" height="350px" /></td></tr>' +
+                    '</table>';
+        break;
+
+      case 'sierra':
+        contenido = '<h2>Cultura de la Sierra</h2>' +
+                      '<table class="sierra1">' +
+                    '<tr><th>La región Sierra, andes (andina), interandina o serranías es una región geográfica de la República del Ecuador que se extiende de norte a sur por los Andes, su altura suele desde los 1800 m o menor, hasta los 6268 m con el Chimborazo. Está conformada por las provincias Pichincha, Carchi, Tungurahua, Chimborazo, Cañar, Azuay, Loja, Imbabura, Bolívar y Cotopaxi.Se caracteriza por sus impresionantes elevaciones montañosas, volcanes y nevados. Entre los más importantes están el Cotopaxi y el Chimborazo. Sus 10 provincias cuentan con ciudades de gran importancia histórica como Quito, Cuenca, Latacunga, Riobamba, Ibarra, Ambato y Loja, y centros artesanales como Otavalo. Igualmente, existen varios parques nacionales con flora y fauna muy ricas y variadas. </th><th><img src="imagenes/i34.jpg" width="600px" height="600px" /></th></tr>' +
+                    '<tr><td><iframe width="560" height="315" src="https://www.youtube.com/embed/-pRKOLLIDio?si=TXkKDWhCmXQi31Gq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td><td>La región Sierra de Ecuador cuenta con una rica tradición gastronómica que refleja la diversidad de sus ingredientes locales y la influencia de las comunidades indígenas. Aquí tienes algunos ejemplos de la comida tradicional de la Sierra ecuatoriana:Cuy, Locro de Papa,Fritada, Llapingachos, Canelazo,Quimbolitos,Colada Morada, Hornado, Papas con Queso, HumitasEstos son solo algunos ejemplos de la variada y deliciosa comida tradicional de la Sierra ecuatoriana. Cada plato refleja la creatividad culinaria local, la disponibilidad de ingredientes y las influencias culturales de la región.</td></tr>' +
+                    '</table>' +
+
+                    '<p>La región sierra de Ecuador, con sus altas montañas, tiene una cultura única. Algunos aspectos destacados incluyen:</p>' +
+                    '<table class="sierra">' +
+                    '<tr><th>Aspecto</th><th>Descripción</th><th>Imágenes</th></tr>' +
+                    '<tr><td>Ciudades Principales</td><td>Quito: La capital de Ecuador se encuentra en la Sierra y es conocida por su bien conservado centro histórico, declarado Patrimonio de la Humanidad por la UNESCO.Cuenca: Otra ciudad importante en la región, también reconocida por su arquitectura colonial y su importancia histórica.</td><td><img src="imagenes/i24.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Geografía</td><td>Cordillera de los Andes: La región Sierra se caracteriza por la presencia de la cordillera de los Andes, que atraviesa la región de norte a sur. Hay numerosos volcanes, valles y montañas que definen el paisaje.</td><td><img src="imagenes/i35.jpg" width="350px" height="350px" /></td></tr>' +
+                   '<tr><td>Clima</td><td>La Sierra tiene una variedad de climas que van desde templados en las tierras altas hasta más cálidos en los valles. La altitud influye en la temperatura y la cantidad de precipitación.</td><td><img src="imagenes/i26.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Turismo</td><td>La región ofrece paisajes impresionantes con montañas, lagos y valles que atraen a turistas y excursionistas.Turismo cultural: Ciudades como Quito y Cuenca son destinos turísticos importantes debido a su rica herencia cultural y arquitectónica. Ciudades como Quito y Cuenca son destinos turísticos importantes debido a su rica herencia cultural y arquitectónica.</td><td><img src="imagenes/i27.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Economía</td><td>La Sierra es una región agrícola importante, donde se cultivan productos como papa, maíz, cebada, quinua y flores.Ganadería: La cría de ganado es común en las tierras altas de la Sierra.</td><td><img src="imagenes/i28.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Cultura y Tradiciones</td><td>Pueblos indígenas: La región Sierra alberga a diversas comunidades indígenas, como los Quichua y los Otavalo, que han conservado sus tradiciones y costumbres a lo largo del tiempo.Arte y Arquitectura: La influencia colonial española es evidente en la arquitectura de las ciudades de la Sierra, con iglesias y edificaciones históricas.</td><td><img src="imagenes/i29.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Fiestas Tradicionales</td><td>Inti Raymi: Celebración del solsticio de verano, con raíces en las tradiciones indígenas.Fiestas de la Mama Negra: En ciudades como Latacunga, esta festividad mezcla elementos indígenas y españoles.</td><td><img src="imagenes/i30.jpg.png" width="350px" height="350px" /></td></tr>' +
+                    '</table>';
+        break;
+      case 'amazonia':
+        contenido = '<h2>Cultura de la Amazonía</h2>' +
+                      '<table class="amazonia1">' +
+                    '<tr><th>La región Amazónica del Ecuador, conocida también como Amazonía u Oriente, es una región geográfica del país sudamericano conformada por un área aproximada de 120 000 km2 de la Amazonia. Comprende las provincias de Sucumbíos, Orellana, Napo, Pastaza, Morona Santiago y Zamora Chinchipe. Se extiende sobre un área de exuberante vegetación, propia de los bosques húmedo-tropicales, representa el 43% del territorio ecuatoriano. Sus límites están marcados por la Cordillera de los Andes en la parte occidental de esta región, mientras que Perú y Colombia en el límite meridional y oriental, respectivamente. </th><th><img src="imagenes/i37.jpg" width="600px" height="600px" /></th></tr>' +
+                    '<tr><td><iframe width="560" height="315" src="https://www.youtube.com/embed/D2UOU1wAgKg?si=vc0-7QtRMkgzDTjr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td><td>La comida tradicional de la Amazonía ecuatoriana refleja la diversidad de ingredientes disponibles en la selva tropical y las prácticas culinarias de las comunidades indígenas. Aquí tienes algunos ejemplos de la gastronomía amazónica ecuatoriana: Yuca con Chifles, Maito, Sinchicuy, Arroz con Menestra de Guayusa, Pescado al Mojo de Ajo, Tortillas de Yuca, Chontacuros, Sopa de Camu Camu, Bijao Relleno, Chicha de Yuca. Estos platillos muestran la creatividad culinaria de las comunidades amazónicas, utilizando ingredientes locales y técnicas tradicionales. La comida de la Amazonía no solo es deliciosa, sino que también refleja la conexión profunda entre la cultura, la naturaleza y la alimentación en esta región única.</td></tr>' +
+                    '</table>' +
+
+                    '<p>La región amazónica de Ecuador, con su exuberante selva, tiene una cultura diversa. Algunos aspectos destacados incluyen:</p>' +
+                    '<table class="amazonia">' +
+                    '<tr><th>Aspecto</th><th>Descripción</th><th>Imágenes</th></tr>' +
+                    '<tr><td>Ubicación Geográfica</td><td>La Amazonía ecuatoriana se encuentra al este de los Andes y limita con Colombia al norte, Perú al este y sur, y con la región Sierra y Costa de Ecuador al oeste.</td><td><img src="imagenes/i38.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Biodiversidad</td><td>Es una de las áreas más biodiversas del mundo. La selva amazónica es hogar de una increíble variedad de flora y fauna, incluyendo especies únicas y endémicas. </td><td><img src="imagenes/i39.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Parques Nacionales y Reservas</td><td>La región alberga varios parques nacionales y reservas ecológicas, como el Parque Nacional Yasuní, que es uno de los lugares más biodiversos del planeta. </td><td><img src="imagenes/i40.jpg" width="350px" height="350px" /></td></tr>' +
+                   '<tr><td>Ríos y Cuencas</td><td>La Amazonía ecuatoriana es atravesada por numerosos ríos, siendo el Napo uno de los más importantes. Estos ríos son parte de la vasta cuenca amazónica y son vitales para la vida en la región. </td><td><img src="imagenes/i41.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Pueblos Indígenas</td><td>La Amazonía ecuatoriana es hogar de numerosas comunidades indígenas, como los Waorani, Shuar, Achuar, entre otros. Estos pueblos mantienen una conexión estrecha con la selva y han desarrollado modos de vida adaptados a su entorno. </td><td><img src="imagenes/i42.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Clima</td><td>La región tiene un clima tropical, caracterizado por altas temperaturas y lluvias frecuentes. La temporada de lluvias suele ser de diciembre a mayo.</td><td><img src="imagenes/i43.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Recursos Naturales</td><td>La Amazonía ecuatoriana es rica en recursos naturales, incluyendo madera, petróleo y minerales. Sin embargo, la explotación de estos recursos también plantea desafíos para la conservación del medio ambiente y los derechos de las comunidades indígenas. </td><td><img src="imagenes/i44.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Turismo Sostenible</td><td>El turismo sostenible en la Amazonía está creciendo, con visitantes que buscan experimentar la biodiversidad única y aprender sobre las culturas indígenas. Los recorridos por la selva, la observación de aves y la convivencia con comunidades locales son actividades populares. </td><td><img src="imagenes/i45.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Desafíos Ambientales y Sociales</td><td>La Amazonía ecuatoriana enfrenta desafíos relacionados con la deforestación, la contaminación ambiental y los conflictos sobre la explotación de recursos. Además, hay preocupaciones sobre la preservación de la tierra y los derechos de las comunidades indígenas. </td><td><img src="imagenes/i46.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Protección Ambiental</td><td>Se están implementando esfuerzos para la conservación y protección de la Amazonía, incluyendo iniciativas para detener la deforestación y promover prácticas sostenibles. </td><td><img src="imagenes/i47.jpg" width="350px" height="350px" /></td></tr>' +
+                    '</table>';
+                  
+                           break;
+       case 'insular':
+        contenido = '<h2>Culturade la región Insular</h2>' +
+                      '<table class="insular1">' +
+                    '<tr><th>Las Islas Galápagos, ubicadas a 972 km de la costa de Ecuador, forman un archipiélago único en el océano Pacífico. Descubiertas en 1535, son la segunda reserva marina más grande del mundo y Patrimonio de la Humanidad. Con una fuente de ingresos principal en el turismo, las islas albergan una biodiversidad extraordinaria, incluyendo especies icónicas como las tortugas gigantes. Además, destacan por su actividad volcánica, siendo el segundo archipiélago más activo del planeta. Su singularidad ecológica las convierte en un lugar de gran importancia científica y ambiental.</th><th><img src="imagenes/i48.jpg" width="600px" height="600px" /></th></tr>' +
+                    '<tr><td><iframe width="560" height="315" src="https://www.youtube.com/embed/khyQT-3v4zo?si=CgbQv8sXJa4WmoXB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td><td>La Región Insular de Ecuador, que incluye las Islas Galápagos, tiene una oferta gastronómica influenciada por la disponibilidad de ingredientes locales y la mezcla de culturas. Aunque la oferta culinaria en las Galápagos puede variar debido a la dependencia de importaciones, aquí hay algunas opciones de comida tradicional que podrías encontrar:Ceviche de Pescado Galapagueño, Langosta Galapagueña:Pescado a la Plancha, Encebollado de Pescado, Arroz Marinero, Churrasco de Mariscos, Yuca con Mojo de Ajo, Chicha de Piña, Dulces Típicos. Es importante tener en cuenta que la disponibilidad de alimentos puede depender de las temporadas y las condiciones locales. Además, debido a la conservación y regulaciones ambientales en las Galápagos, algunos productos locales se consumen de manera sostenible para preservar la biodiversidad única de la región.</td></tr>' +
+                    '</table>' +
+
+                    '<p>La Región Insular de Ecuador se refiere al archipiélago de las Islas Galápagos, ubicado en el océano Pacífico, alrededor de 1,000 kilómetros al oeste de la costa ecuatoriana continental. Algunos aspectos destacados incluyen:</p>' +
+                    '<table class="insular">' +
+                    '<tr><th>Aspecto</th><th>Descripción</th><th>Imágenes</th></tr>' +
+                    '<tr><td>Islas Galápagos</td><td>El archipiélago de las Islas Galápagos está compuesto por 13 islas principales y más de 100 islotes e islitas. Estas islas son conocidas por su biodiversidad única y su papel crucial en la teoría de la evolución de Charles Darwin.</td><td><img src="imagenes/i49.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Biodiversidad Única</td><td>Las Islas Galápagos albergan una sorprendente variedad de especies endémicas que no se encuentran en ningún otro lugar del mundo. Entre ellas se incluyen las famosas tortugas gigantes, iguanas marinas, piqueros de patas azules y leones marinos.</td><td><img src="imagenes/i50.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Parque Nacional Galápagos</td><td>La mayor parte de las Islas Galápagos es parte del Parque Nacional Galápagos, que fue declarado Patrimonio de la Humanidad por la UNESCO en 1978. La conservación y protección de la flora y fauna son prioridades en esta región.</td><td><img src="imagenes/i51.jpg" width="350px" height="350px" /></td></tr>' +
+                   '<tr><td>Reserva Marina</td><td>Gran parte de las aguas circundantes a las islas también forman parte de la Reserva Marina de Galápagos, lo que contribuye a la preservación de los ecosistemas marinos y la vida marina.</td><td><img src="imagenes/i52.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Turismo Sostenible</td><td>El turismo es una industria importante en las Islas Galápagos, pero se ha implementado un enfoque de turismo sostenible y controlado para preservar el delicado equilibrio del ecosistema.</td><td><img src="imagenes/i53.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Investigación Científica</td><td>Las Islas Galápagos son un laboratorio natural para la investigación científica. Diversas instituciones y científicos de todo el mundo llevan a cabo estudios sobre la ecología, el comportamiento animal y la conservación.</td><td><img src="imagenes/i54.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Clima y Geografía</td><td>Las Islas Galápagos tienen un clima ecuatorial, con dos estaciones distintas: la temporada cálida y húmeda (diciembre a junio) y la temporada fresca y seca (junio a diciembre). La topografía varía desde paisajes volcánicos hasta playas de arena blanca.</td><td><img src="imagenes/i55.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Población Humana</td><td>Aunque la población humana en las Islas Galápagos es relativamente pequeña, hay comunidades asentadas en las islas habitadas, como Santa Cruz, San Cristóbal e Isabela. Estas comunidades están dedicadas principalmente al turismo y la pesca sostenible.</td><td><img src="imagenes/i56.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Desafíos Ambientales</td><td>A pesar de los esfuerzos de conservación, las Islas Galápagos enfrentan desafíos ambientales, como la presión del turismo y la amenaza de especies invasoras que pueden afectar el equilibrio ecológico.</td><td><img src="imagenes/i57.jpg" width="350px" height="350px" /></td></tr>' +
+                    '<tr><td>Protección Ambiental</td><td>La conservación ambiental es una prioridad en las Islas Galápagos. Se han implementado estrictas regulaciones para controlar la actividad humana y prevenir la introducción de especies invasoras.</td><td><img src="imagenes/i58.jpg" width="350px" height="350px" /></td></tr>' +
+                    '</table>';
+break;
+
+      default:
+        contenido = '<p>Selecciona una región para ver más detalles.</p>';
+    }
+
+    infoDiv.innerHTML = contenido;
+  }
+</script>
+
+</body>
+</html>
